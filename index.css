@@ -1,0 +1,156 @@
+body {
+    margin: 0;
+    padding: 0;
+    background: url('/imagenes/ondas.svg');
+    background-size: 100%;
+  }
+  body svg {
+    opacity: 0.5;
+  }
+.encabezado {
+    background-color: purple;
+    background: linear-gradient(135deg, #4e008e, #8e00ff);
+    color: white;
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    padding: 10px 0;
+    text-align: center;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 1000; /* Para asegurar que esté por encima del contenido */
+  }
+.titulo {
+    color: white;
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    text-align: center;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+  }
+
+.logo img {
+    width: 100px; /* Ancho del logo */
+    height: auto; /* Altura automática para mantener la proporción */
+    display: inline-block; /* Permite alinear el logo horizontalmente */
+    float: left;
+    margin-left: 30px;
+  }
+
+.acortador {
+    text-align: center;
+}
+
+.entrada {
+    margin-top: 10px;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc; /* Borde ligero */
+    border-radius: 5px; /* Bordes redondeados */
+    font-size: 16px;
+    color: #666; /* Color de texto gris */
+    width: 700px;
+}
+
+
+.resultado{ margin-top: 10px;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc; /* Borde ligero */
+    border-radius: 5px; /* Bordes redondeados */
+    font-size: 16px;
+    color: #666; /* Color de texto gris */
+    width: 700px;
+    background: #fff;
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+
+}
+@media only screen and (max-width: 768px) {
+    .entrada {
+        width: 300px; /* Cambia el ancho al 90% para dispositivos móviles */
+        font-size: 14px; /* Cambia el tamaño de fuente para dispositivos móviles */
+        margin-top: 10px; /* Ajusta el margen superior para dispositivos móviles */
+    }
+
+    .resultado{ width: 300px; /* Cambia el ancho al 90% para dispositivos móviles */
+        font-size: 14px; /* Cambia el tamaño de fuente para dispositivos móviles */
+        margin-top: 10px; /* Ajusta el margen superior para dispositivos móviles */
+
+    }
+}
+
+.contenedorentrada {
+    margin-top: 10%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+@media only screen and (max-width: 768px) {
+    .contenedorentrada {
+        margin-top: 30%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+}
+
+.boton {
+    padding: 10px 20px;
+    font-size: 16px;
+    background-color: #4e008e;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s; /* Transición suave */
+    margin-bottom: 100px;
+}
+
+.boton:hover {
+    background-color: #fff; /* Color de fondo del botón al pasar el ratón */
+    color: #4e008e;
+}
+
+
+.sobrecor{  
+    max-width: 800px; /* Ancho máximo del contenido */
+    margin: 0 auto; /* Centra el contenido horizontalmente */
+    text-align: center; /* Centra el texto horizontalmente */
+    background-color: #ffffffdc;
+    padding: 10px;
+    border-radius: 20px;
+}
+
+.sobrecor h1{
+    font-size: 30px;
+    color: #4e008e;
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-weight: bold;
+    text-align: center;
+    width: 100%;
+    top: 0;
+    left: 0;
+
+}
+
+.sobrecor h2{
+    font-size: 18px;
+    color: #000000ef;
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    text-align: center;
+    width: 100%;
+    top: 0;
+    left: 0;
+}
+
+.footer {
+    margin-top: 100px;
+    background-color: rgb(73, 6, 73);
+    background: linear-gradient(135deg, #3e046e, #7330aa);
+    color: white;
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    padding: 10px 0;
+    text-align: center;
+    width: 100%;
+  }

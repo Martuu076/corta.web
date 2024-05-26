@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Corta.web</title>
+    <link rel="stylesheet" type="text/css" href="/index.css">
+    <link rel="icon" href="/imagenes/logoconcolor.png" type="image/x-icon">
+</head>
+<body>
+    <div class="encabezado"> 
+        <div class="logo">
+            <img src="/imagenes/logo.png" alt="Logo">
+        </div>
+        <div class="titulo">
+            <p>Corta.web <br>
+            Recortador de URL</p>
+        </div>
+    </div>
+
+    <div class="contenedorentrada">
+        <div class="logoacolor">
+            <img src="/imagenes/logoconcolor.png" alt="Logo">
+        </div>
+
+        <div class="acortador">
+            <input type="text" id="urlInput" class="entrada" placeholder="Ingresar link a acortar">
+        </div>
+        <div id="resultado" class="resultado">Resultado</div>
+        <button class="boton" onclick="acortarURL()">Acortar link</button>
+    </div>
+
+    <div class="sobrecor">
+        <h1>¿Para qué sirve Corta.web?</h1>
+        <h2>Acortar una URL o link, es la forma de reducir la cantidad de caracteres usados para dirigir a un portal de internet más allá de la extensión del enlace con mas caracteres, el enlace seguro en resumen hacer mas pequeño un enlace link o url.
+         </h2>
+        <h1>¿Cómo funciona?</h1>
+        <h2>Únicamente debes insertar el link que deseas acortar en la entrada de texto y darle al botón "Acortar Link"</h2>
+    </div>
+
+    <footer>
+        <div class="footer">
+            <p>Corta.web</p>
+        </div>
+    </footer>
+
+    <script>
+        function acortarURL() {
+            var longUrl = document.getElementById('urlInput').value;
+            var urlParts = longUrl.split('/');
+            var domain = urlParts[2];
+            var path = urlParts.slice(3).join('/');
+            var shortenedUrl = domain + '/' + (path.length > 20 ? path.substring(0, 20) + '...' : path);
+            
+            // Actualizar el contenido del elemento resultado con el enlace acortado
+            document.getElementById('resultado').innerHTML = shortenedUrl;
+        }
+    </script>
+</body>
+</html>
